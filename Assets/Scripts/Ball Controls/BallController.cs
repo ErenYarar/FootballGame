@@ -317,7 +317,6 @@ public class BallController : MonoBehaviour
             //    transform.hasChanged = false;
             //    ps.SetActive(false);
             //}
-            SoundManager.instance.GoollSound();
 
         }
 
@@ -329,10 +328,12 @@ public class BallController : MonoBehaviour
 
     IEnumerator GollTextTimer()
     {
+        SoundManager.instance.GoollSound();
         Goll_Text.gameObject.SetActive(true);
         //Sound
         yield return new WaitForSeconds(2f);
         Goll_Text.gameObject.SetActive(false);
+
 
     }
 }
